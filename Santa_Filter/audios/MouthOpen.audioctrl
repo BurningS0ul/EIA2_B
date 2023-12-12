@@ -1,0 +1,8 @@
+{
+  "modelName": "playback_controller_model",
+  "name": "MouthOpen",
+  "identifier": "playback_controller_model:232573-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+  "needsContinuousLooping": false,
+  "needsContinuousPlaying": true,
+  "soundIdentifier": "sound:232575-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+}

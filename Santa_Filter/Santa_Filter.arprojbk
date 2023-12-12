@@ -1,0 +1,2088 @@
+{
+  "modelName": "document",
+  "name": "Effect",
+  "identifier": "document:213216-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+  "id": "21321484c10c8a21e14ee0b238ed5fa4765998",
+  "revision": "21321584c10c8a21e14ee0b238ed5fa4765998",
+  "version": {
+    "dev": 0,
+    "patch": 0,
+    "prod": 173
+  },
+  "creatorIdentifier": "com.facebook.arstudio.skylight",
+  "creatorPlatform": "windows",
+  "creatorFileVersion": {
+    "dev": 0,
+    "patch": 0,
+    "prod": 173
+  },
+  "cameraFar": 50,
+  "cameraNear": 0.009999999776482582,
+  "measurementUnit": "meter",
+  "objects": [
+    {
+      "modelName": "assets_config_model",
+      "identifier": "assets_config_model:213439-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "categoriesOrder": [
+        "textures",
+        "materials",
+        "playback_controllers",
+        "audio",
+        "scripts"
+      ]
+    }
+  ],
+  "projectFormatType": "separated_files",
+  "usingPatchesV2": true,
+  "visual_programming": {
+    "connections": [
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:222466-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPatch": "template_patch_model:222460-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPort": "101",
+        "toPatch": "template_patch_model:222462-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "toPort": "2"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:222468-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPatch": "template_patch_model:222462-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPort": "100",
+        "toPatch": "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "toPort": "100"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:222470-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPatch": "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPort": "1001",
+        "toPatch": "template_patch_model:222464-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "toPort": "101"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:232963-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPatch": "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPort": "1001",
+        "toPatch": "template_patch_model:232961-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "toPort": "101"
+      }
+    ],
+    "graphs": [
+      {
+        "modelName": "patch_graph",
+        "identifier": "patch_graph:213306-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "subpatches": [
+          "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "template_patch_model:222460-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "template_patch_model:222462-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "template_patch_model:222464-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "template_patch_model:232961-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        ]
+      }
+    ],
+    "patches": [
+      {
+        "modelName": "producer_patch_model",
+        "name": "faceTracker0",
+        "identifier": "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "object": "facetracker:218317-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          476,
+          44
+        ]
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Face Finder",
+        "identifier": "template_patch_model:222460-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          50.92499999999984,
+          126.39999999999998
+        ],
+        "templateId": "builtin.faceTracker"
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Face Select",
+        "identifier": "template_patch_model:222462-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          212,
+          116
+        ],
+        "templateId": "builtin.facePicker",
+        "values": [
+          {
+            "port": "1",
+            "value": {
+              "t": "int",
+              "v": 0
+            }
+          }
+        ]
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Head Rotation",
+        "identifier": "template_patch_model:222464-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          673.9249999999998,
+          126.39999999999998
+        ],
+        "templateId": "builtin.group.headRotation"
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Mouth Open",
+        "identifier": "template_patch_model:232961-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          692,
+          44
+        ],
+        "templateId": "builtin.group.mouthOpen"
+      }
+    ]
+  },
+  "children": [
+    {
+      "modelName": "textures",
+      "identifier": "textures:213222-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "defaultEnvironmentTexture": "environment_texture_model:213690-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "texture",
+          "name": "office_diffuse",
+          "identifier": "texture:213663-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "alphaPremultiplicationMode": "none",
+          "assetLocator": "213664-84c10c8a-21e1-4ee0-b238-ed5fa4765998.png",
+          "colorEncoding": "rgbd",
+          "coordMapping": "equirectangular",
+          "exportConfigurations": [
+            "textureExportConfig:213666-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+            "textureExportConfig:213668-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+            "textureExportConfig:213670-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+          ],
+          "fileLocator": {
+            "path": "textures/DiffuseEnvironment.texture"
+          },
+          "height": 32,
+          "isExternalAsset": false,
+          "uWrapMode": "repeat",
+          "width": 64,
+          "children": [
+            {
+              "modelName": "data_texture_metadata_model",
+              "assetDataHash": "87798819e923aa7a1df352c412d6cf13",
+              "colorCount": 759,
+              "detectedAlphaChannel": "no_alpha",
+              "detectedOriginalFormat": "png",
+              "entropyOfDistribution": 9.103762231252079,
+              "pixelsHigh": 32,
+              "pixelsWide": 64
+            }
+          ]
+        },
+        {
+          "modelName": "texture",
+          "name": "office_preview",
+          "identifier": "texture:213672-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "alphaPremultiplicationMode": "none",
+          "assetLocator": "213673-84c10c8a-21e1-4ee0-b238-ed5fa4765998.png",
+          "coordMapping": "equirectangular",
+          "excludeDuringExport": true,
+          "exportConfigurations": [
+            "textureExportConfig:213675-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+            "textureExportConfig:213677-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+            "textureExportConfig:213679-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+          ],
+          "fileLocator": {
+            "path": "textures/PreviewEnvironment.texture"
+          },
+          "height": 256,
+          "isExternalAsset": false,
+          "uWrapMode": "repeat",
+          "width": 512
+        },
+        {
+          "modelName": "texture",
+          "name": "office_specular",
+          "identifier": "texture:213681-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "alphaPremultiplicationMode": "none",
+          "assetLocator": "213682-84c10c8a-21e1-4ee0-b238-ed5fa4765998.png",
+          "colorEncoding": "rgbd",
+          "coordMapping": "equirectangular",
+          "exportConfigurations": [
+            "textureExportConfig:213684-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+            "textureExportConfig:213686-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+            "textureExportConfig:213688-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+          ],
+          "fileLocator": {
+            "path": "textures/SpecularEnvironment.texture"
+          },
+          "filter": "trilinear",
+          "height": 256,
+          "isExternalAsset": false,
+          "uWrapMode": "repeat",
+          "width": 512,
+          "children": [
+            {
+              "modelName": "data_texture_metadata_model",
+              "assetDataHash": "d0ad2eb085ec23eaae4044c7d47a2ad4",
+              "colorCount": 44059,
+              "detectedAlphaChannel": "eight_bit_full_range",
+              "detectedOriginalFormat": "png",
+              "entropyOfDistribution": 14.411108935529345,
+              "pixelsHigh": 256,
+              "pixelsWide": 512
+            }
+          ]
+        },
+        {
+          "modelName": "environment_texture_model",
+          "name": "Default environment texture",
+          "identifier": "environment_texture_model:213690-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "diffuseEnvironmentTextureIdentifier": "texture:213663-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "previewEnvironmentTextureIdentifier": "texture:213672-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "specularEnvironmentTextureIdentifier": "texture:213681-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        },
+        {
+          "modelName": "dependent_texture_model",
+          "name": "Fabric17_PBR_baseColor",
+          "identifier": "dependent_texture_model:217515-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "alphaPremultiplicationMode": "none",
+          "assetLocator": "8a9f40e861b09339a3a75fdada73f368.png",
+          "colorEncoding": "srgb",
+          "fileLocator": {
+            "path": "objects/scene/Fabric17_PBR_baseColor.texture"
+          },
+          "filter": "trilinear",
+          "height": 1024,
+          "isExternalAsset": false,
+          "originalFileHash": "8a9f40e861b09339a3a75fdada73f368",
+          "originalFileReference": "file_reference_model:217623-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "uWrapMode": "repeat",
+          "vWrapMode": "repeat",
+          "width": 1024,
+          "children": [
+            {
+              "modelName": "data_texture_metadata_model",
+              "assetDataHash": "8a9f40e861b09339a3a75fdada73f368",
+              "colorCount": 188,
+              "detectedAlphaChannel": "no_alpha",
+              "detectedOriginalFormat": "png",
+              "entropyOfDistribution": 6.881131486055677,
+              "pixelsHigh": 1024,
+              "pixelsWide": 1024
+            }
+          ]
+        },
+        {
+          "modelName": "dependent_texture_model",
+          "name": "Fabric17_PBR_metallicRoughness",
+          "identifier": "dependent_texture_model:217517-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "alphaPremultiplicationMode": "none",
+          "assetLocator": "3f1d8d83e44a604f3f193cf9151e51e5.png",
+          "fileLocator": {
+            "path": "objects/scene/Fabric17_PBR_metallicRoughness.texture"
+          },
+          "filter": "trilinear",
+          "height": 1024,
+          "isExternalAsset": false,
+          "originalFileHash": "3f1d8d83e44a604f3f193cf9151e51e5",
+          "originalFileReference": "file_reference_model:217625-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "uWrapMode": "repeat",
+          "vWrapMode": "repeat",
+          "width": 1024,
+          "children": [
+            {
+              "modelName": "data_texture_metadata_model",
+              "assetDataHash": "3f1d8d83e44a604f3f193cf9151e51e5",
+              "colorCount": 48,
+              "detectedAlphaChannel": "no_alpha",
+              "detectedOriginalFormat": "png",
+              "entropyOfDistribution": 4.7902952590071965,
+              "pixelsHigh": 1024,
+              "pixelsWide": 1024
+            }
+          ]
+        },
+        {
+          "modelName": "dependent_texture_model",
+          "name": "Fabric17_PBR_normal",
+          "identifier": "dependent_texture_model:217519-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "alphaPremultiplicationMode": "none",
+          "assetLocator": "4631acb6ef8b85fe6ec3911f91ebfc3b.png",
+          "fileLocator": {
+            "path": "objects/scene/Fabric17_PBR_normal.texture"
+          },
+          "filter": "trilinear",
+          "height": 1024,
+          "isExternalAsset": false,
+          "originalFileHash": "42e322939ca355858df05e2bd02efa77",
+          "originalFileReference": "file_reference_model:217627-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "uWrapMode": "repeat",
+          "vWrapMode": "repeat",
+          "width": 1024,
+          "children": [
+            {
+              "modelName": "data_texture_metadata_model",
+              "assetDataHash": "4631acb6ef8b85fe6ec3911f91ebfc3b",
+              "colorCount": 57648,
+              "detectedAlphaChannel": "no_alpha",
+              "detectedOriginalFormat": "png",
+              "entropyOfDistribution": 14.846644375616425,
+              "pixelsHigh": 1024,
+              "pixelsWide": 1024
+            }
+          ]
+        },
+        {
+          "modelName": "personSegmentationTexture",
+          "name": "segmentationMaskTexture0",
+          "identifier": "personSegmentationTexture:223524-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "dilationKernelWidth": 1.9545454545454444,
+          "edgeSoftness": 0.9181818181818173
+        },
+        {
+          "modelName": "personSegmentationTexture",
+          "name": "segmentationMaskTexture1",
+          "identifier": "personSegmentationTexture:224953-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        },
+        {
+          "modelName": "cameraTexture",
+          "name": "cameraTexture0",
+          "identifier": "cameraTexture:224955-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceSceneObjectIdentifier": "camera:213292-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        },
+        {
+          "modelName": "texture",
+          "name": "pngimg.com - star_PNG41483",
+          "identifier": "texture:227180-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetDataHash": "2e3cdbe77fe2b1ff7ff68bbb77c784b3",
+          "assetLocator": "textures/pngimg.com - star_PNG41483.png",
+          "fileLocator": {
+            "path": "textures/pngimg.com - star_PNG41483.texture"
+          },
+          "height": 1001,
+          "isExternalAsset": true,
+          "width": 1024,
+          "children": [
+            {
+              "modelName": "data_texture_metadata_model",
+              "name": "data_texture_metadata_model0",
+              "assetDataHash": "2e3cdbe77fe2b1ff7ff68bbb77c784b3",
+              "colorCount": 61825,
+              "detectedAlphaChannel": "eight_bit_full_range",
+              "detectedOriginalFormat": "png",
+              "entropyOfDistribution": 10.521493096339434,
+              "pixelsHigh": 1001,
+              "pixelsWide": 1024
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelName": "materials",
+      "identifier": "materials:213224-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "dependent_metallic_roughness_p_b_r_material_model",
+          "name": "Fabric17_PBR",
+          "identifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "baseColorTextureName": "dependent_texture_model:217515-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "blendMode": "replace",
+          "doubleSided": true,
+          "environmentEnabled": true,
+          "environmentTextureName": "environment_texture_model:213690-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "fileLocator": {
+            "path": "objects/scene/Fabric17_PBR.material"
+          },
+          "isBaseColorTextureIdentifierEnabled": true,
+          "isMetallicRoughnessTextureIdentifierEnabled": true,
+          "isNormalTextureIdentifierEnabled": true,
+          "metallicFactor": 1,
+          "metallicRoughnessTextureName": "dependent_texture_model:217517-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "normalTextureName": "dependent_texture_model:217519-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "normalTextureScale": 0.699999988079071,
+          "roughnessFactor": 1,
+          "vertexColorEnabled": true
+        },
+        {
+          "modelName": "dependent_metallic_roughness_p_b_r_material_model",
+          "name": "Material.003",
+          "identifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "blendMode": "replace",
+          "doubleSided": true,
+          "environmentEnabled": true,
+          "environmentTextureName": "environment_texture_model:213690-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "fileLocator": {
+            "path": "objects/scene/Material.003.material"
+          },
+          "roughnessFactor": 0.5,
+          "vertexColorEnabled": true
+        },
+        {
+          "modelName": "defaultMaterial",
+          "name": "Guy",
+          "identifier": "defaultMaterial:224957-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "diffuseTextureName": "cameraTexture:224955-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "fileLocator": {
+            "path": "materials/Guy-2.material"
+          },
+          "isDiffuseTextureIdentifierEnabled": true,
+          "isMultiplyTextureIdentifierEnabled": true,
+          "multiplyTextureName": "personSegmentationTexture:223524-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        },
+        {
+          "modelName": "defaultMaterial",
+          "name": "Background",
+          "identifier": "defaultMaterial:227556-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "diffuseFactor": "0xff97fffc",
+          "fileLocator": {
+            "path": "materials/Background-2.material"
+          },
+          "lightingEnabled": true
+        },
+        {
+          "modelName": "defaultMaterial",
+          "name": "Hands",
+          "identifier": "defaultMaterial:226436-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "diffuseTextureName": "texture:227180-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "fileLocator": {
+            "path": "materials/Hands.material"
+          },
+          "isDiffuseTextureIdentifierEnabled": true,
+          "lightingEnabled": true
+        }
+      ]
+    },
+    {
+      "modelName": "prefabs",
+      "identifier": "prefabs:213226-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "gltf",
+          "name": "Object_4",
+          "identifier": "gltf:217535-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "master3_d_object_model:217615-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetLocator": "217536-84c10c8a-21e1-4ee0-b238-ed5fa4765998.glb",
+          "isExternalAsset": false
+        },
+        {
+          "modelName": "gltf",
+          "name": "Object_5",
+          "identifier": "gltf:217555-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "master3_d_object_model:217615-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetLocator": "217556-84c10c8a-21e1-4ee0-b238-ed5fa4765998.glb",
+          "isExternalAsset": false
+        },
+        {
+          "modelName": "gltf",
+          "name": "Object_6",
+          "identifier": "gltf:217565-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "master3_d_object_model:217615-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetLocator": "217566-84c10c8a-21e1-4ee0-b238-ed5fa4765998.glb",
+          "isExternalAsset": false
+        },
+        {
+          "modelName": "gltf",
+          "name": "Object_7",
+          "identifier": "gltf:217585-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "master3_d_object_model:217615-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetLocator": "217586-84c10c8a-21e1-4ee0-b238-ed5fa4765998.glb",
+          "isExternalAsset": false
+        },
+        {
+          "modelName": "gltf",
+          "name": "Object_9",
+          "identifier": "gltf:217605-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "master3_d_object_model:217615-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetLocator": "217606-84c10c8a-21e1-4ee0-b238-ed5fa4765998.glb",
+          "isExternalAsset": false
+        }
+      ]
+    },
+    {
+      "modelName": "3_d_objects_model",
+      "identifier": "3_d_objects_model:213228-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "master3_d_object_model",
+          "name": "Santa Hat",
+          "identifier": "master3_d_object_model:217615-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "depth": 1.2278975248336792,
+          "fileLocator": {
+            "path": "objects/scene/scene.object"
+          },
+          "height": 0.7849841117858887,
+          "layerIdentifier": "layer0",
+          "transform": {
+            "rx": -1.5707963705062866,
+            "ry": 0.754022479057312,
+            "rz": 2.0853057806339317E-16,
+            "sx": 1,
+            "sy": 1,
+            "sz": 1,
+            "x": -0.010879628360271454,
+            "y": -5.112822556780475E-17,
+            "z": -0.019738947972655296
+          },
+          "width": 1.397721290588379,
+          "children": [
+            {
+              "modelName": "sceneObject",
+              "name": "root",
+              "identifier": "sceneObject:217525-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "layerIdentifier": "layer0",
+              "children": [
+                {
+                  "modelName": "sceneObject",
+                  "name": "GLTF_SceneRootNode",
+                  "identifier": "sceneObject:217527-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                  "layerIdentifier": "layer0",
+                  "transform": {
+                    "rx": 1.5707963705062866,
+                    "ry": 0,
+                    "rz": 0,
+                    "sx": 1,
+                    "sy": 1,
+                    "sz": 1,
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "children": [
+                    {
+                      "modelName": "sceneObject",
+                      "name": "Cube.011_1",
+                      "identifier": "sceneObject:217529-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                      "layerIdentifier": "layer0",
+                      "children": [
+                        {
+                          "modelName": "mesh",
+                          "name": "Object_4",
+                          "identifier": "mesh:217531-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "layerIdentifier": "layer0",
+                          "nodeName": "Object_4",
+                          "numberOfFaces": 126431,
+                          "prefabIdentifier": "gltf:217535-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "children": [
+                            {
+                              "modelName": "surfaces",
+                              "identifier": "surfaces:217533-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "children": [
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface0",
+                                  "identifier": "surface:217538-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface1",
+                                  "identifier": "surface:217541-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface2",
+                                  "identifier": "surface:217543-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface3",
+                                  "identifier": "surface:217545-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface4",
+                                  "identifier": "surface:217547-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface5",
+                                  "identifier": "surface:217549-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "modelName": "mesh",
+                          "name": "Object_5",
+                          "identifier": "mesh:217551-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "layerIdentifier": "layer0",
+                          "nodeName": "Object_5",
+                          "numberOfFaces": 12833,
+                          "prefabIdentifier": "gltf:217555-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "children": [
+                            {
+                              "modelName": "surfaces",
+                              "identifier": "surfaces:217553-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "children": [
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface0",
+                                  "identifier": "surface:217558-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217559-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "modelName": "mesh",
+                          "name": "Object_6",
+                          "identifier": "mesh:217561-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "layerIdentifier": "layer0",
+                          "nodeName": "Object_6",
+                          "numberOfFaces": 128956,
+                          "prefabIdentifier": "gltf:217565-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "children": [
+                            {
+                              "modelName": "surfaces",
+                              "identifier": "surfaces:217563-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "children": [
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface0",
+                                  "identifier": "surface:217568-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface1",
+                                  "identifier": "surface:217571-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface2",
+                                  "identifier": "surface:217573-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface3",
+                                  "identifier": "surface:217575-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface4",
+                                  "identifier": "surface:217577-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface5",
+                                  "identifier": "surface:217579-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "modelName": "mesh",
+                          "name": "Object_7",
+                          "identifier": "mesh:217581-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "layerIdentifier": "layer0",
+                          "nodeName": "Object_7",
+                          "numberOfFaces": 92228,
+                          "prefabIdentifier": "gltf:217585-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "children": [
+                            {
+                              "modelName": "surfaces",
+                              "identifier": "surfaces:217583-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "children": [
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface0",
+                                  "identifier": "surface:217588-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface1",
+                                  "identifier": "surface:217591-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface2",
+                                  "identifier": "surface:217593-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface3",
+                                  "identifier": "surface:217595-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                },
+                                {
+                                  "modelName": "surface",
+                                  "name": "surface4",
+                                  "identifier": "surface:217597-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "modelName": "sceneObject",
+                          "name": "Cube.012_0",
+                          "identifier": "sceneObject:217599-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "layerIdentifier": "layer0",
+                          "transform": {
+                            "rx": 0,
+                            "ry": 0,
+                            "rz": 0,
+                            "sx": 0.1937660127878189,
+                            "sy": 0.1937660276889801,
+                            "sz": 0.1937660276889801,
+                            "x": 0.1405566781759262,
+                            "y": 0.09423774480819702,
+                            "z": 0.6197630167007446
+                          },
+                          "children": [
+                            {
+                              "modelName": "mesh",
+                              "name": "Object_9",
+                              "identifier": "mesh:217601-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "layerIdentifier": "layer0",
+                              "nodeName": "Object_9",
+                              "numberOfFaces": 49152,
+                              "prefabIdentifier": "gltf:217605-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "children": [
+                                {
+                                  "modelName": "surfaces",
+                                  "identifier": "surfaces:217603-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "children": [
+                                    {
+                                      "modelName": "surface",
+                                      "name": "surface0",
+                                      "identifier": "surface:217608-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                      "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                      "surfaceGroupIdentifier": "217609-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                    },
+                                    {
+                                      "modelName": "surface",
+                                      "name": "surface1",
+                                      "identifier": "surface:217611-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                      "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                      "surfaceGroupIdentifier": "217609-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                    },
+                                    {
+                                      "modelName": "surface",
+                                      "name": "surface2",
+                                      "identifier": "surface:217613-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                      "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                      "surfaceGroupIdentifier": "217609-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelName": "scene",
+      "identifier": "scene:213230-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "fileLocator": {
+        "path": "Santa_Filter.scene"
+      },
+      "children": [
+        {
+          "modelName": "device",
+          "name": "Device",
+          "identifier": "device:213290-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "layerIdentifier": "layer0",
+          "children": [
+            {
+              "modelName": "camera",
+              "name": "Camera",
+              "identifier": "camera:213292-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "layerIdentifier": "layer0",
+              "children": [
+                {
+                  "modelName": "focalDistance",
+                  "name": "Focal Distance",
+                  "identifier": "focalDistance:213294-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                  "layerIdentifier": "layer0",
+                  "transform": {
+                    "rx": 0,
+                    "ry": 0,
+                    "rz": 0,
+                    "sx": 1,
+                    "sy": 1,
+                    "sz": 1,
+                    "x": 0,
+                    "y": 0,
+                    "z": -0.5361266732215881
+                  },
+                  "children": [
+                    {
+                      "modelName": "ambient_light_source_model",
+                      "name": "ambientLight0",
+                      "identifier": "ambient_light_source_model:213302-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                      "layerIdentifier": "layer0"
+                    },
+                    {
+                      "modelName": "directional_light_source_model",
+                      "name": "directionalLight0",
+                      "identifier": "directional_light_source_model:213304-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                      "intensity": 0.800000011920929,
+                      "layerIdentifier": "layer0",
+                      "transform": {
+                        "rx": -0.7853981852531433,
+                        "ry": 0.0872664526104927,
+                        "rz": 0,
+                        "sx": 1,
+                        "sy": 1,
+                        "sz": 1,
+                        "x": 0.029999999329447746,
+                        "y": 0.25,
+                        "z": 0.30000001192092896
+                      }
+                    },
+                    {
+                      "modelName": "composition_model",
+                      "name": "Canvas",
+                      "identifier": "composition_model:223518-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                      "height": 844,
+                      "layerIdentifier": "layer0",
+                      "transform": {
+                        "rx": 0,
+                        "ry": 0,
+                        "rz": 0,
+                        "sx": 0.0005924170836806297,
+                        "sy": 0.0005924170836806297,
+                        "sz": 0.0005924170836806297,
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                      },
+                      "width": 390,
+                      "children": [
+                        {
+                          "modelName": "rectangle_model",
+                          "name": "Dude",
+                          "identifier": "rectangle_model:223516-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "height": {
+                            "unit": {
+                              "multiplier": 1,
+                              "unitBase": 20
+                            },
+                            "value": 113.15165876777252
+                          },
+                          "layerIdentifier": "layer0",
+                          "materialIdentifier": "defaultMaterial:224957-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "pinnedLeft": true,
+                          "pinnedTop": true,
+                          "transform": {
+                            "rx": 0,
+                            "ry": 2.842170943040401E-14,
+                            "rz": 0,
+                            "sx": 1,
+                            "sy": 1,
+                            "sz": 1,
+                            "x": 0,
+                            "y": 0,
+                            "z": 0.00006103515625
+                          },
+                          "usesFlexibleHeight": true,
+                          "usesFlexibleWidth": true,
+                          "width": {
+                            "unit": {
+                              "multiplier": 1,
+                              "unitBase": 20
+                            },
+                            "value": 134.6153846153846
+                          }
+                        },
+                        {
+                          "modelName": "rectangle_model",
+                          "name": "BG",
+                          "identifier": "rectangle_model:224815-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "height": {
+                            "unit": {
+                              "multiplier": 1,
+                              "unitBase": 20
+                            },
+                            "value": 100
+                          },
+                          "layerIdentifier": "layer1",
+                          "materialIdentifier": "defaultMaterial:227556-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "pinnedLeft": true,
+                          "pinnedTop": true,
+                          "transform": {
+                            "rx": 0,
+                            "ry": 2.842170943040401E-14,
+                            "rz": 0,
+                            "sx": 1,
+                            "sy": 1,
+                            "sz": 1,
+                            "x": 0,
+                            "y": 0,
+                            "z": 0.00006103515625
+                          },
+                          "usesFlexibleHeight": true,
+                          "usesFlexibleWidth": true,
+                          "width": {
+                            "unit": {
+                              "multiplier": 1,
+                              "unitBase": 20
+                            },
+                            "value": 100
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "modelName": "facetracker",
+                      "name": "faceTracker0",
+                      "identifier": "facetracker:218317-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                      "layerIdentifier": "layer0",
+                      "children": [
+                        {
+                          "modelName": "3_d_object_instance_model",
+                          "name": "Santa Hat",
+                          "identifier": "master3_d_object_model:217944-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "sourceIdentifier": "master3_d_object_model:217615-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "depth": 1.2278975248336792,
+                          "height": 0.7849841117858887,
+                          "layerIdentifier": "layer0",
+                          "transform": {
+                            "rx": -0.745641827583313,
+                            "ry": -1.3883072137832642,
+                            "rz": -0.8409915566444397,
+                            "sx": 0.20000000298023224,
+                            "sy": 0.19999998807907104,
+                            "sz": 0.20000001788139343,
+                            "x": -0.006032504141330719,
+                            "y": 0.05174367129802704,
+                            "z": -0.026225537061691284
+                          },
+                          "width": 1.397721290588379,
+                          "children": [
+                            {
+                              "modelName": "sceneObject",
+                              "name": "root",
+                              "identifier": "sceneObject:217965-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "sourceIdentifier": "sceneObject:217525-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "layerIdentifier": "layer0",
+                              "transform": {
+                                "rx": -1.7763570511584873E-15,
+                                "ry": 1.7763566276420137E-15,
+                                "rz": -2.9802318834981634E-8,
+                                "sx": 1.0000001192092896,
+                                "sy": 1,
+                                "sz": 0.9999999403953552,
+                                "x": 0,
+                                "y": -1.4901161193847656E-8,
+                                "z": -2.9802322387695312E-8
+                              },
+                              "children": [
+                                {
+                                  "modelName": "sceneObject",
+                                  "name": "GLTF_SceneRootNode",
+                                  "identifier": "sceneObject:217968-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "sourceIdentifier": "sceneObject:217527-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                  "layerIdentifier": "layer0",
+                                  "transform": {
+                                    "rx": 1.5707963705062866,
+                                    "ry": 0,
+                                    "rz": -2.9802322387695312E-8,
+                                    "sx": 0.9999999403953552,
+                                    "sy": 1.0000001192092896,
+                                    "sz": 1,
+                                    "x": -3.725290298461914E-9,
+                                    "y": 0,
+                                    "z": 0
+                                  },
+                                  "children": [
+                                    {
+                                      "modelName": "sceneObject",
+                                      "name": "Cube.011_1",
+                                      "identifier": "sceneObject:217971-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                      "sourceIdentifier": "sceneObject:217529-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                      "layerIdentifier": "layer0",
+                                      "transform": {
+                                        "rx": 5.12409659177821E-15,
+                                        "ry": 2.9802322387695312E-8,
+                                        "rz": -8.290445085534608E-16,
+                                        "sx": 1,
+                                        "sy": 0.9999999403953552,
+                                        "sz": 1,
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                      },
+                                      "children": [
+                                        {
+                                          "modelName": "mesh",
+                                          "name": "Object_4",
+                                          "identifier": "mesh:217974-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "sourceIdentifier": "mesh:217531-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "layerIdentifier": "layer0",
+                                          "nodeName": "Object_4",
+                                          "numberOfFaces": 126431,
+                                          "prefabIdentifier": "gltf:217535-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "transform": {
+                                            "rx": 5.124097438811157E-15,
+                                            "ry": 2.9802322387695312E-8,
+                                            "rz": 0,
+                                            "sx": 1,
+                                            "sy": 1.0000001192092896,
+                                            "sz": 1,
+                                            "x": 7.450581485102248E-9,
+                                            "y": 0,
+                                            "z": -1.4901162970204496E-8
+                                          },
+                                          "children": [
+                                            {
+                                              "modelName": "surfaces",
+                                              "identifier": "surfaces:217977-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "sourceIdentifier": "surfaces:217533-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "children": [
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface0",
+                                                  "identifier": "surface:217980-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217538-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface1",
+                                                  "identifier": "surface:217983-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217541-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface2",
+                                                  "identifier": "surface:217986-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217543-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface3",
+                                                  "identifier": "surface:217989-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217545-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface4",
+                                                  "identifier": "surface:217992-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217547-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface5",
+                                                  "identifier": "surface:217995-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217549-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217539-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "modelName": "blend_shapes_model",
+                                              "identifier": "blend_shapes_model:218307-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "modelName": "mesh",
+                                          "name": "Object_5",
+                                          "identifier": "mesh:217998-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "sourceIdentifier": "mesh:217551-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "layerIdentifier": "layer0",
+                                          "nodeName": "Object_5",
+                                          "numberOfFaces": 12833,
+                                          "prefabIdentifier": "gltf:217555-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "transform": {
+                                            "rx": 5.124097438811157E-15,
+                                            "ry": 2.9802322387695312E-8,
+                                            "rz": 0,
+                                            "sx": 1,
+                                            "sy": 1.0000001192092896,
+                                            "sz": 1,
+                                            "x": 7.450581485102248E-9,
+                                            "y": 0,
+                                            "z": -1.4901162970204496E-8
+                                          },
+                                          "children": [
+                                            {
+                                              "modelName": "surfaces",
+                                              "identifier": "surfaces:218001-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "sourceIdentifier": "surfaces:217553-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "children": [
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface0",
+                                                  "identifier": "surface:218004-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217558-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217513-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217559-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "modelName": "blend_shapes_model",
+                                              "identifier": "blend_shapes_model:218309-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "modelName": "mesh",
+                                          "name": "Object_6",
+                                          "identifier": "mesh:218007-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "sourceIdentifier": "mesh:217561-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "layerIdentifier": "layer0",
+                                          "nodeName": "Object_6",
+                                          "numberOfFaces": 128956,
+                                          "prefabIdentifier": "gltf:217565-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "transform": {
+                                            "rx": 5.124097438811157E-15,
+                                            "ry": 2.9802322387695312E-8,
+                                            "rz": 0,
+                                            "sx": 1,
+                                            "sy": 1.0000001192092896,
+                                            "sz": 1,
+                                            "x": 7.450581485102248E-9,
+                                            "y": 0,
+                                            "z": -1.4901162970204496E-8
+                                          },
+                                          "children": [
+                                            {
+                                              "modelName": "surfaces",
+                                              "identifier": "surfaces:218010-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "sourceIdentifier": "surfaces:217563-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "children": [
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface0",
+                                                  "identifier": "surface:218013-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217568-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface1",
+                                                  "identifier": "surface:218016-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217571-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface2",
+                                                  "identifier": "surface:218019-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217573-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface3",
+                                                  "identifier": "surface:218022-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217575-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface4",
+                                                  "identifier": "surface:218025-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217577-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface5",
+                                                  "identifier": "surface:218028-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217579-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217569-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "modelName": "blend_shapes_model",
+                                              "identifier": "blend_shapes_model:218311-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "modelName": "mesh",
+                                          "name": "Object_7",
+                                          "identifier": "mesh:218031-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "sourceIdentifier": "mesh:217581-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "layerIdentifier": "layer0",
+                                          "nodeName": "Object_7",
+                                          "numberOfFaces": 92228,
+                                          "prefabIdentifier": "gltf:217585-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "transform": {
+                                            "rx": 5.124097438811157E-15,
+                                            "ry": 2.9802322387695312E-8,
+                                            "rz": 0,
+                                            "sx": 1,
+                                            "sy": 1.0000001192092896,
+                                            "sz": 1,
+                                            "x": 7.450581485102248E-9,
+                                            "y": 0,
+                                            "z": -1.4901162970204496E-8
+                                          },
+                                          "children": [
+                                            {
+                                              "modelName": "surfaces",
+                                              "identifier": "surfaces:218034-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "sourceIdentifier": "surfaces:217583-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "children": [
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface0",
+                                                  "identifier": "surface:218037-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217588-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface1",
+                                                  "identifier": "surface:218040-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217591-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface2",
+                                                  "identifier": "surface:218043-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217593-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface3",
+                                                  "identifier": "surface:218046-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217595-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                },
+                                                {
+                                                  "modelName": "surface",
+                                                  "name": "surface4",
+                                                  "identifier": "surface:218049-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surface:217597-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "surfaceGroupIdentifier": "217589-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "modelName": "blend_shapes_model",
+                                              "identifier": "blend_shapes_model:218313-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "modelName": "sceneObject",
+                                          "name": "Cube.012_0",
+                                          "identifier": "sceneObject:218052-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "sourceIdentifier": "sceneObject:217599-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                          "layerIdentifier": "layer0",
+                                          "transform": {
+                                            "rx": 5.1240978623276305E-15,
+                                            "ry": 2.9802322387695312E-8,
+                                            "rz": 0,
+                                            "sx": 0.1937660127878189,
+                                            "sy": 0.1937660574913025,
+                                            "sz": 0.1937660276889801,
+                                            "x": 0.1405567079782486,
+                                            "y": 0.09423776715993881,
+                                            "z": 0.6197630763053894
+                                          },
+                                          "children": [
+                                            {
+                                              "modelName": "mesh",
+                                              "name": "Object_9",
+                                              "identifier": "mesh:218055-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "sourceIdentifier": "mesh:217601-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "layerIdentifier": "layer0",
+                                              "nodeName": "Object_9",
+                                              "numberOfFaces": 49152,
+                                              "prefabIdentifier": "gltf:217605-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                              "transform": {
+                                                "rx": -6.611189138592275E-15,
+                                                "ry": 0,
+                                                "rz": -2.117582368135751E-22,
+                                                "sx": 1,
+                                                "sy": 0.9999997615814209,
+                                                "sz": 1,
+                                                "x": -5.960464477539063E-8,
+                                                "y": 2.384185791015625E-7,
+                                                "z": -2.384185791015625E-7
+                                              },
+                                              "children": [
+                                                {
+                                                  "modelName": "surfaces",
+                                                  "identifier": "surfaces:218058-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "sourceIdentifier": "surfaces:217603-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                  "children": [
+                                                    {
+                                                      "modelName": "surface",
+                                                      "name": "surface0",
+                                                      "identifier": "surface:218061-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "sourceIdentifier": "surface:217608-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "surfaceGroupIdentifier": "217609-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                    },
+                                                    {
+                                                      "modelName": "surface",
+                                                      "name": "surface1",
+                                                      "identifier": "surface:218064-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "sourceIdentifier": "surface:217611-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "surfaceGroupIdentifier": "217609-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                    },
+                                                    {
+                                                      "modelName": "surface",
+                                                      "name": "surface2",
+                                                      "identifier": "surface:218067-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "sourceIdentifier": "surface:217613-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:217521-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                                                      "surfaceGroupIdentifier": "217609-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "modelName": "blend_shapes_model",
+                                                  "identifier": "blend_shapes_model:218315-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "modelName": "handtracker",
+                      "name": "handTracker0",
+                      "identifier": "handtracker:222822-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                      "layerIdentifier": "layer0",
+                      "children": [
+                        {
+                          "modelName": "composition_model",
+                          "name": "canvas0",
+                          "identifier": "composition_model:225322-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                          "height": 844,
+                          "layerIdentifier": "layer0",
+                          "spaceMode": "world_space",
+                          "transform": {
+                            "rx": 0,
+                            "ry": 0,
+                            "rz": 0,
+                            "sx": 0.0005924170836806297,
+                            "sy": 0.0005924170836806297,
+                            "sz": 0.0005924170836806297,
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "width": 390,
+                          "children": [
+                            {
+                              "modelName": "emitter",
+                              "name": "emitter0",
+                              "identifier": "emitter:226808-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "emitter.lifetime": 2,
+                              "emitter.spawnRate": 40,
+                              "emitter.spawnRateDelta": 0.2,
+                              "emitter.velocityAngleDeltaX": 100,
+                              "emitter.velocityAngleDeltaY": 100,
+                              "emitter.velocityAngleDeltaZ": 100,
+                              "emitter.velocityAngleY": 20,
+                              "emitter.velocityAngleZ": 20,
+                              "layerIdentifier": "layer0",
+                              "materialIdentifier": "defaultMaterial:226436-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+                              "transform": {
+                                "rx": 0,
+                                "ry": 0,
+                                "rz": 0,
+                                "sx": 1687.999937117102,
+                                "sy": 1687.999937117102,
+                                "sz": 1687.999937117102,
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelName": "microphone_model",
+              "name": "Microphone",
+              "identifier": "microphone_model:213296-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "layerIdentifier": "layer0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelName": "layers",
+      "identifier": "layers:213232-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "layer",
+          "name": "layer0",
+          "identifier": "layer:213298-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "color": "0xff8c72ca"
+        },
+        {
+          "modelName": "layer",
+          "name": "layer1",
+          "identifier": "layer:224941-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "color": "0xffeb7dbd",
+          "generationIndex": 1
+        }
+      ]
+    },
+    {
+      "modelName": "asset_collections_model",
+      "identifier": "asset_collections_model:213236-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "asset_collection_model",
+          "name": "Santa Hat",
+          "identifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "applicationData": [],
+          "assetDataHash": "75ab8abf218627be9b203fba22293822",
+          "assetLocator": "objects/scene/scene.gltf",
+          "authoringTool": "Sketchfab-12.67.0",
+          "excludeDuringExport": true,
+          "isExternalAsset": true,
+          "master3DInstanceSourceHash": "75ab8abf218627be9b203fba22293822",
+          "textures": [
+            "dependent_texture_model:217515-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+            "dependent_texture_model:217517-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+            "dependent_texture_model:217519-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+          ],
+          "children": [
+            {
+              "modelName": "unsupportedFeatures",
+              "name": "unsupportedFeatures0",
+              "identifier": "unsupportedFeatures:217617-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "namesForFeatureType": {
+                "Material": [
+                  "Fabric17_PBR",
+                  "Material.003"
+                ]
+              }
+            },
+            {
+              "modelName": "file_reference_model",
+              "name": "scene",
+              "identifier": "file_reference_model:217621-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "assetDataHash": "2046a32394845dd5658c1c54d3a5e7e9",
+              "assetLocator": "objects/scene/scene.bin",
+              "excludeDuringExport": true,
+              "isExternalAsset": true
+            },
+            {
+              "modelName": "file_reference_model",
+              "name": "Fabric17_PBR_baseColor",
+              "identifier": "file_reference_model:217623-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "assetDataHash": "8a9f40e861b09339a3a75fdada73f368",
+              "assetLocator": "objects/scene/textures/Fabric17_PBR_baseColor.png",
+              "excludeDuringExport": true,
+              "isExternalAsset": true
+            },
+            {
+              "modelName": "file_reference_model",
+              "name": "Fabric17_PBR_metallicRoughness",
+              "identifier": "file_reference_model:217625-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "assetDataHash": "3f1d8d83e44a604f3f193cf9151e51e5",
+              "assetLocator": "objects/scene/textures/Fabric17_PBR_metallicRoughness.png",
+              "excludeDuringExport": true,
+              "isExternalAsset": true
+            },
+            {
+              "modelName": "file_reference_model",
+              "name": "Fabric17_PBR_normal",
+              "identifier": "file_reference_model:217627-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "sourceIdentifier": "asset_collection_model:217619-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+              "assetDataHash": "42e322939ca355858df05e2bd02efa77",
+              "assetLocator": "objects/scene/textures/Fabric17_PBR_normal.jpeg",
+              "excludeDuringExport": true,
+              "isExternalAsset": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelName": "patch_graphs_model",
+      "identifier": "patch_graphs_model:213242-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+    },
+    {
+      "modelName": "scripts_model",
+      "identifier": "scripts_model:213250-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "script_bridging_variables_model",
+          "identifier": "script_bridging_variables_model:213252-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        },
+        {
+          "modelName": "script",
+          "name": "script0",
+          "identifier": "script:232967-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetDataHash": "c5a1b5e2e81d50a14137c02c4b00cd5f",
+          "assetLocator": "scripts/script.js",
+          "isExternalAsset": true
+        }
+      ]
+    },
+    {
+      "modelName": "bundled_packages_model",
+      "identifier": "bundled_packages_model:213258-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+    },
+    {
+      "modelName": "exportConfig",
+      "identifier": "exportConfig:213262-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213666-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best"
+        },
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213668-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best",
+          "targetFormat": 2
+        },
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213670-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best",
+          "targetFormat": 1
+        },
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213675-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best"
+        },
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213677-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best",
+          "targetFormat": 2
+        },
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213679-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best",
+          "targetFormat": 1
+        },
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213684-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best"
+        },
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213686-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best",
+          "targetFormat": 2
+        },
+        {
+          "modelName": "textureExportConfig",
+          "identifier": "textureExportConfig:213688-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "accuracy": "best",
+          "targetFormat": 1
+        }
+      ]
+    },
+    {
+      "modelName": "manifest",
+      "identifier": "manifest:213264-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "additionalEnabledChanges": null,
+      "assistantAppIDs": [
+        "2320137961422959"
+      ],
+      "assistantClientToken": null,
+      "assistantIncludeInDevelopmentArtifacts": false,
+      "assistantQuickTestEnabled": true,
+      "assistantStorageEnabled": true,
+      "assistantUseWit": false,
+      "audioEnableAudioGraphComponents": false,
+      "audioEnableAudioTransformationsApi": false,
+      "bodyTrackingMinVersion": 101,
+      "cameraControlDefaultCameraFacing": "unspecified",
+      "dynamicTextAltitude": false,
+      "dynamicTextDate": false,
+      "dynamicTextLocation": false,
+      "dynamicTextTranslation": false,
+      "dynamicTextWeather": false,
+      "effectDisablesAudioPreview": false,
+      "effectDisablesMicrophone": false,
+      "effectForceAsyncScripting": false,
+      "effectForcesSynchronousScripting": false,
+      "effectHasAmbientAudio": false,
+      "effectHasAudioGraphApi": false,
+      "effectHasTriggeredAudio": false,
+      "effectImageAntiAliasingEdgeSharpness": 0.5,
+      "effectImageAntiAliasingEdgeThreshold": 0.5,
+      "effectImageAntiAliasingTechnique": "fxaa",
+      "effectRecordingFromMic": false,
+      "effectUses4KTextures": false,
+      "effectUsesAnimationPlaybackController": false,
+      "effectUsesAnimationScriptingModule": false,
+      "effectUsesAppLauncher": false,
+      "effectUsesAssistant": false,
+      "effectUsesAudio": true,
+      "effectUsesAudioLegacyMicFork": false,
+      "effectUsesAudioMixer": false,
+      "effectUsesAudioSpatialEmitter": false,
+      "effectUsesAudioTimestamps": false,
+      "effectUsesAugmentControl": false,
+      "effectUsesAugmentGrouping": false,
+      "effectUsesAugmentSizeControl": false,
+      "effectUsesAutomaticAlphaSort": false,
+      "effectUsesAutomaticInstructions": true,
+      "effectUsesBlockModulesConfigExtras": false,
+      "effectUsesBlocks": false,
+      "effectUsesBlocksDownloadable": false,
+      "effectUsesBlocksScripting": false,
+      "effectUsesBodyTracking": false,
+      "effectUsesBodyTracking2DKeyPoints": false,
+      "effectUsesBoundingBoxScripting": false,
+      "effectUsesBoundingBoxUtilities": false,
+      "effectUsesCameraControl": false,
+      "effectUsesCameraInfoScriptingModule": false,
+      "effectUsesCameraShare": false,
+      "effectUsesComponentEvaluation": true,
+      "effectUsesComposedLocally": false,
+      "effectUsesComposedMaterial": false,
+      "effectUsesControllers": false,
+      "effectUsesCustomEngineSDK": false,
+      "effectUsesCustomFonts": false,
+      "effectUsesCustomMaterial": false,
+      "effectUsesCustomMaterialAndShaderCodeAsset": false,
+      "effectUsesCustomPipeline": false,
+      "effectUsesDSP": false,
+      "effectUsesDate": false,
+      "effectUsesDebugPatch": false,
+      "effectUsesDeltaTime": false,
+      "effectUsesDepth": false,
+      "effectUsesDepthData": false,
+      "effectUsesDepthShaderRead": false,
+      "effectUsesDeviceMotion": false,
+      "effectUsesDiagnosticsScriptingModule": true,
+      "effectUsesDirectionalLightEstimation": false,
+      "effectUsesDspAudioAnalyzer": false,
+      "effectUsesDspBitCrusher": false,
+      "effectUsesDspCompressor": false,
+      "effectUsesDspDelay": false,
+      "effectUsesDspDenoiser": false,
+      "effectUsesDspDistortion": false,
+      "effectUsesDspEnergyMeter": false,
+      "effectUsesDspModulator": false,
+      "effectUsesDspParametricEqualizer": false,
+      "effectUsesDspPitchShifter": false,
+      "effectUsesDspReverb": false,
+      "effectUsesDspVocoder": false,
+      "effectUsesDynamicInstructions": false,
+      "effectUsesDynamicScriptProperties": false,
+      "effectUsesDynamicText": false,
+      "effectUsesEmbeddedVideo": false,
+      "effectUsesEnvironmentTexturePatch": false,
+      "effectUsesExperienceControl": false,
+      "effectUsesExternalBlocks": false,
+      "effectUsesExternalFonts": false,
+      "effectUsesExternalMusicSelection": false,
+      "effectUsesExternalTextures": false,
+      "effectUsesExternalTexturesAudio": false,
+      "effectUsesExternalVideo": false,
+      "effectUsesExternalVideoStream": false,
+      "effectUsesFBA": false,
+      "effectUsesFaceDistortion": false,
+      "effectUsesFaceExpression52Blendshapes": false,
+      "effectUsesFaceExpressionExperimental": false,
+      "effectUsesFaceExpressionFitting": false,
+      "effectUsesFaceExtraction": false,
+      "effectUsesFaceTracker": true,
+      "effectUsesFaceTracker3D": true,
+      "effectUsesFaceTracker96": false,
+      "effectUsesFaceTrackingScripting2D": false,
+      "effectUsesFaceTrueScale": false,
+      "effectUsesFaceWave": false,
+      "effectUsesFacialExpressionRecognition": false,
+      "effectUsesFacialGestureRecognition": true,
+      "effectUsesFieldOfView": false,
+      "effectUsesFingerTracking": false,
+      "effectUsesFonts": false,
+      "effectUsesFormFactor": false,
+      "effectUsesFrameBrightness": false,
+      "effectUsesGalleryPicker": false,
+      "effectUsesGenericML": false,
+      "effectUsesGlobalTransform": false,
+      "effectUsesGlslEs300Features": false,
+      "effectUsesGltfPbrShader": false,
+      "effectUsesGraphQL": false,
+      "effectUsesHairSegmentation": false,
+      "effectUsesHalfFloatRenderPass": false,
+      "effectUsesHandGestureKeypoints": false,
+      "effectUsesHandTracker": true,
+      "effectUsesHapticFeedback": false,
+      "effectUsesHeadsetInfo": false,
+      "effectUsesHmdNetworkingAPI": false,
+      "effectUsesI18n": false,
+      "effectUsesIdTracker": false,
+      "effectUsesImageAntiAliasing": false,
+      "effectUsesImageAssets": false,
+      "effectUsesImageBasedLighting": true,
+      "effectUsesInstruction": true,
+      "effectUsesIntent": false,
+      "effectUsesInterEffectLinking": false,
+      "effectUsesInternalScriptingAPI": false,
+      "effectUsesIrisTracking": false,
+      "effectUsesJavaScript": true,
+      "effectUsesJavaScriptRuntimeForPatches": false,
+      "effectUsesJavaScriptScripting": true,
+      "effectUsesJavaScriptShaders": false,
+      "effectUsesJavascriptToPatchesBridging": false,
+      "effectUsesLayers": false,
+      "effectUsesLocale": false,
+      "effectUsesLocation": false,
+      "effectUsesLocationAirportData": false,
+      "effectUsesMaterialsScriptingModule": false,
+      "effectUsesMaxParticipants": false,
+      "effectUsesMicrophone": false,
+      "effectUsesMicrophoneV2": false,
+      "effectUsesMovingTargetTracking": false,
+      "effectUsesMultipeer": false,
+      "effectUsesMultipeerMessaging": false,
+      "effectUsesMultiplane": false,
+      "effectUsesMultiplayer": false,
+      "effectUsesMultipleRenderTargets": false,
+      "effectUsesMusic": false,
+      "effectUsesNativeUIControl": false,
+      "effectUsesNativeUIControlEditableText": false,
+      "effectUsesNativeUIControlEditableTextExitCB": false,
+      "effectUsesNativeUIControlPicker": false,
+      "effectUsesNativeUIControlPickerRemoteImages": false,
+      "effectUsesNativeUIControlRawTextInput": false,
+      "effectUsesNativeUIControlSlider": false,
+      "effectUsesNativeUIControlSliderTypeColor": false,
+      "effectUsesNetworking": false,
+      "effectUsesNetworkingScriptAPI": false,
+      "effectUsesObjectCapture": false,
+      "effectUsesObjectTracking": false,
+      "effectUsesOpticalFlow": false,
+      "effectUsesOpusCodec": false,
+      "effectUsesOverlayOutput": false,
+      "effectUsesPBRMaterial": true,
+      "effectUsesParticipant": false,
+      "effectUsesParticleSystem": true,
+      "effectUsesPeerOutput": false,
+      "effectUsesPeerVideoStream": false,
+      "effectUsesPermissions": false,
+      "effectUsesPersistence": false,
+      "effectUsesPersistenceCaptureScope": false,
+      "effectUsesPersistenceSharedScope": false,
+      "effectUsesPersonalization": false,
+      "effectUsesPhysics": false,
+      "effectUsesPhysicsSync": false,
+      "effectUsesPlaneTrackerTrackTextureAPI": false,
+      "effectUsesPlatformEvents": false,
+      "effectUsesPlatformEventsDocumentScoped": false,
+      "effectUsesPlatformFunctions": false,
+      "effectUsesPlatformTextures": false,
+      "effectUsesPlaybackInfo": false,
+      "effectUsesPortalPose": false,
+      "effectUsesPreciseLocation": false,
+      "effectUsesPrefabScriptingModule": false,
+      "effectUsesPreviewCaptureOutputs": false,
+      "effectUsesRGBCameraTexture": false,
+      "effectUsesRTRMapping": false,
+      "effectUsesRandomScriptingModule": false,
+      "effectUsesReactiveScriptingModule": false,
+      "effectUsesRealScaleEstimation": false,
+      "effectUsesRealScaleEstimationWithFallback": false,
+      "effectUsesRecognition": false,
+      "effectUsesRecognitionTracking": false,
+      "effectUsesRecordedSignalsForSamplers": false,
+      "effectUsesRemote3DModels": false,
+      "effectUsesRemoteMaps": false,
+      "effectUsesRenderPasses": false,
+      "effectUsesRenderSettingsHigh": false,
+      "effectUsesRingTryOn": false,
+      "effectUsesRotateVector": false,
+      "effectUsesSceneDepth": false,
+      "effectUsesSceneDepthWithFallback": false,
+      "effectUsesSceneObjectTags": false,
+      "effectUsesSceneRenderPassResolutionAspectRatio": false,
+      "effectUsesSceneScriptingModule": false,
+      "effectUsesScriptAnalytics": false,
+      "effectUsesScriptingDynamicInstantiation": false,
+      "effectUsesSegmentation": true,
+      "effectUsesSegmentationType": true,
+      "effectUsesShaderCode": false,
+      "effectUsesShaderPicking": false,
+      "effectUsesShadows": false,
+      "effectUsesSkinSegmentation": false,
+      "effectUsesSkinSmoothing": false,
+      "effectUsesSpatialGesture": false,
+      "effectUsesSpatialHandTracking": false,
+      "effectUsesSplitScreen": false,
+      "effectUsesStaticTargetTracking": false,
+      "effectUsesStyleTransfer": false,
+      "effectUsesSupportedOrientations": false,
+      "effectUsesSvg": false,
+      "effectUsesSyncDomApis": false,
+      "effectUsesTargetRecognition": false,
+      "effectUsesTextAssets": false,
+      "effectUsesTextCaptions": false,
+      "effectUsesTextExtrusion": false,
+      "effectUsesTexturesScriptingModule": false,
+      "effectUsesTimeScriptingModule": false,
+      "effectUsesToasterTracking": false,
+      "effectUsesTouchGestures": false,
+      "effectUsesTwoDimensionalText": false,
+      "effectUsesTypeScript": false,
+      "effectUsesUiCore": false,
+      "effectUsesUiPlanarBackend": false,
+      "effectUsesUnifiedTargetTracking": false,
+      "effectUsesUnitsScriptingModule": false,
+      "effectUsesVariadicMath": false,
+      "effectUsesVertexTextureFetch": false,
+      "effectUsesVisualShaders": false,
+      "effectUsesVisualShadersSdf": false,
+      "effectUsesVoiceInteraction": false,
+      "effectUsesWarpPostProcessor": false,
+      "effectUsesWarpPreProcessor": false,
+      "effectUsesWarpSmoothing": true,
+      "effectUsesWeather": false,
+      "effectUsesWebPTexture": false,
+      "effectUsesWebsockets": false,
+      "effectUsesWorldTracker": false,
+      "effectUsesWorldTrackerEnvironmentLight": false,
+      "effectUsesWorldTrackerJSAPI": false,
+      "effectUsesWorldTrackingWorldMap": false,
+      "effectUsesWorldUnderstanding": false,
+      "effectUsesWorldUnderstandingV2": false,
+      "effectUsesWriteableSignalSource": false,
+      "engineSDKVersion": "173.0",
+      "externalTexturesWhitelistedDomains": null,
+      "faceExpressionFittingMinVersion": 15,
+      "faceExpressionFittingRTRRetargetingMinVersion": 1,
+      "faceTrackerIsEnabled": false,
+      "faceTrackerMaxFaces": 1,
+      "faceTrackerMinVersion": 13,
+      "facewaveMinVersion": 1,
+      "hairSegmentationMinVersion": 1,
+      "handTrackerMaxHands": 2,
+      "handTrackerMinVersion": 3,
+      "instructionFindAnImageBackCameraEnabled": true,
+      "instructionFindAnImageFrontCameraEnabled": true,
+      "instructionFindBodyBackCameraEnabled": true,
+      "instructionFindBodyFrontCameraEnabled": true,
+      "instructionFindFaceBackCameraEnabled": true,
+      "instructionFindFaceFrontCameraEnabled": true,
+      "instructionFindHandBackCameraEnabled": true,
+      "instructionFindHandFrontCameraEnabled": true,
+      "instructionFindPersonBackCameraEnabled": true,
+      "instructionFindPersonFrontCameraEnabled": true,
+      "instructionTokens": null,
+      "interEffectLinkingEffectIds": null,
+      "internalScriptingAPIDelay": false,
+      "internalScriptingAPIDeprecatedParticles": false,
+      "internalScriptingAPIEventStream": false,
+      "internalScriptingAPIExperimentalCameraInfo": false,
+      "internalScriptingAPIGlobalTransform": false,
+      "manuallyEnabledItemsIds": [],
+      "maxParticipantsCount": 0,
+      "multiclassSegmentationMinVersion": 3004,
+      "objectTrackerMaxObjects": 1,
+      "persistenceWhitelistedKeys": null,
+      "personalizationSpecialOccasion": "none",
+      "platformUsage": {},
+      "recognitionMinVersion": 2,
+      "ringTryOnMinVersion": 1,
+      "sceneDepthMinVersion": 1,
+      "sceneDepthWithFallbackMinVersion": 1,
+      "segmentationMinVersion": 2,
+      "shaderPostProcessor": false,
+      "shaderPreProcessor": false,
+      "supportsLandscape": false,
+      "supportsPortrait": true,
+      "supportsWildcardDomainsWhitelisting": false,
+      "targetRecognitionMinVersion": 2,
+      "touchGesturesSupportsLongPress": false,
+      "touchGesturesSupportsPan": false,
+      "touchGesturesSupportsPinch": false,
+      "touchGesturesSupportsRawTouch": false,
+      "touchGesturesSupportsRotate": false,
+      "touchGesturesSupportsTap": false,
+      "whitelistedDomains": null,
+      "witAppId": null,
+      "witClientToken": null,
+      "worldTrackerBackCameraEnabled": true,
+      "worldTrackerFrontCameraEnabled": true,
+      "worldTrackerMode": "plane",
+      "worldTrackerUsesFaceTracker": false
+    },
+    {
+      "modelName": "target",
+      "identifier": "target:213274-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "targetPlatforms": []
+    },
+    {
+      "modelName": "scripting_config_model",
+      "identifier": "scripting_config_model:213284-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "forceStrictModeCompilation": true
+    },
+    {
+      "modelName": "graphicsConfig",
+      "identifier": "graphicsConfig:213308-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+    },
+    {
+      "modelName": "videos_model",
+      "identifier": "videos_model:213419-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+    },
+    {
+      "modelName": "asset_attributions_model",
+      "identifier": "asset_attributions_model:231760-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "asset_attribution_model",
+          "identifier": "asset_attribution_model:232579-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetAuthor": "Spark AR Assets",
+          "assetModelIdentifier": "sound:232575-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetTitle": "90s Sitcom Theme Intro 01",
+          "assetURLString": "",
+          "licenseModelIdentifier": "license_model:232577-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        }
+      ]
+    },
+    {
+      "modelName": "licenses_model",
+      "identifier": "licenses_model:231762-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "license_model",
+          "name": "Sound Collection Terms",
+          "identifier": "license_model:232577-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "linkURLString": "https://www.facebook.com/sound/collection/terms",
+          "slug": "License"
+        }
+      ]
+    },
+    {
+      "modelName": "playback_controllers_model",
+      "identifier": "playback_controllers_model:231764-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "playback_controller_model",
+          "name": "MouthOpen",
+          "identifier": "playback_controller_model:232573-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "fileLocator": {
+            "path": "audios/MouthOpen.audioctrl"
+          },
+          "needsContinuousPlaying": true,
+          "soundIdentifier": "sound:232575-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        }
+      ]
+    },
+    {
+      "modelName": "sounds",
+      "identifier": "sounds:231772-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+      "children": [
+        {
+          "modelName": "sound",
+          "name": "arl_mus_90sSitcomThemeIntro_os_01.m4a",
+          "identifier": "sound:232575-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "assetDataHash": "369b298bf29cea8f7ec590f931ee3bb8",
+          "assetLocator": "sounds/arl_mus_90sSitcomThemeIntro_os_01.m4a",
+          "externalSourceLocator": "sparkarstudio://arlibrary/facebook/audio/903549086831784",
+          "isExternalAsset": true
+        }
+      ]
+    }
+  ]
+}

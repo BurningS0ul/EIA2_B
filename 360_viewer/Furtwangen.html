@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360 View</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-sphere radius="5000" class="scene1">
+      <a-sky src="https://lh3.ggpht.com/p/AF1QipMQEAJl1iwok6VFJUHnkJXFYBLxyFUPX_Rd0utP=s8000"></a-sky>
+    </a-sphere>
+    <a-box class="text1" width="2.5" height="0.5" rotation="0 5 0" position="-1.5 2.25 -1.5" opacity="0">
+      <a-text value="Triberg" anchor="align"></a-text>
+    </a-box>
+
+    <a-sphere radius="5000" class="scene2">
+      <a-sky src="https://lh3.ggpht.com/p/AF1QipNvVklyEqzlJCYlk9okrokRGIA2LYLrnlPRW7vp=s8000"></a-sky>
+    </a-sphere>
+    <a-box class="text2" width="2.5" height="0.5" rotation="0 5 0" position="-1.5 2.25 -1.5" opacity="0">
+      <a-text value="Furtwangen" anchor="align"></a-text>
+    </a-box>
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>

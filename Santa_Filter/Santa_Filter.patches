@@ -1,0 +1,126 @@
+{
+  "id": "21321484c10c8a21e14ee0b238ed5fa4765998",
+  "revision": "21321584c10c8a21e14ee0b238ed5fa4765998",
+  "version": {
+    "dev": 0,
+    "patch": 0,
+    "prod": 173
+  },
+  "creatorIdentifier": "com.facebook.arstudio.skylight",
+  "creatorPlatform": "windows",
+  "creatorFileVersion": {
+    "dev": 0,
+    "patch": 0,
+    "prod": 173
+  },
+  "visual_programming": {
+    "connections": [
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:222466-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPatch": "template_patch_model:222460-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPort": "101",
+        "toPatch": "template_patch_model:222462-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "toPort": "2"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:222468-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPatch": "template_patch_model:222462-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPort": "100",
+        "toPatch": "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "toPort": "100"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:222470-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPatch": "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPort": "1001",
+        "toPatch": "template_patch_model:222464-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "toPort": "101"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:232963-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPatch": "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "fromPort": "1001",
+        "toPatch": "template_patch_model:232961-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "toPort": "101"
+      }
+    ],
+    "graphs": [
+      {
+        "modelName": "patch_graph",
+        "identifier": "patch_graph:213306-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "subpatches": [
+          "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "template_patch_model:222460-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "template_patch_model:222462-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "template_patch_model:222464-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+          "template_patch_model:232961-84c10c8a-21e1-4ee0-b238-ed5fa4765998"
+        ]
+      }
+    ],
+    "patches": [
+      {
+        "modelName": "producer_patch_model",
+        "name": "faceTracker0",
+        "identifier": "producer_patch_model:222458-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "object": "facetracker:218317-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          476,
+          44
+        ]
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Face Finder",
+        "identifier": "template_patch_model:222460-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          50.92499999999984,
+          126.39999999999998
+        ],
+        "templateId": "builtin.faceTracker"
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Face Select",
+        "identifier": "template_patch_model:222462-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          212,
+          116
+        ],
+        "templateId": "builtin.facePicker",
+        "values": [
+          {
+            "port": "1",
+            "value": {
+              "t": "int",
+              "v": 0
+            }
+          }
+        ]
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Head Rotation",
+        "identifier": "template_patch_model:222464-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          673.9249999999998,
+          126.39999999999998
+        ],
+        "templateId": "builtin.group.headRotation"
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Mouth Open",
+        "identifier": "template_patch_model:232961-84c10c8a-21e1-4ee0-b238-ed5fa4765998",
+        "position": [
+          692,
+          44
+        ],
+        "templateId": "builtin.group.mouthOpen"
+      }
+    ]
+  }
+}
