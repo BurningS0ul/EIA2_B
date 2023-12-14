@@ -1,8 +1,0 @@
-Model Information:
-* title:	A Beautiful lighted Christmas tree
-* source:	https://sketchfab.com/3d-models/a-beautiful-lighted-christmas-tree-7c32b2fe0849460facbc61b6e2e4e4a8
-* author:	sidder (https://sketchfab.com/sidder)
-
-Model License:
-* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
-* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
